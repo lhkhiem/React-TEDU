@@ -6,8 +6,11 @@ function App() {
     <>
       <div className="App">
         <h1>Ứng dụng đầu tiên từ ReactJs</h1>
-        <Person/>
-        <Person>Khong co gi</Person>
+        <Person name="Khiêm 1" age="11"/>
+        <br></br>
+        <Person name="Khiêm 2" age="12"/>
+        <br></br>
+        <Person name="Khiêm 3" age="13">Tôi là children</Person>
       </div>
     </>
   );
