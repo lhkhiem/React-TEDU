@@ -29,20 +29,27 @@ function App() {
   ]);
   const changeameHandler = (e) => {
     setPersons([
-      {name:"Mr.Khiem", age:"31"},
-      {name:"Mr.Ly", age:"28"},
-      {name:"Mr.Truong", age:"27"}
+      { name: "Mr.Khiem", age: "31" },
+      { name: "Mr.Ly", age: "28" },
+      { name: "Mr.Truong", age: "27" }
     ])
   }
-
+  const switchNameHandler = (event) => {
+    console.log(event);
+    setPersons([
+      { name: event.target.value, age: "31" },
+      { name: "Mr.Ly", age: "28" },
+      { name: "Mr.Truong", age: "27" }
+    ])
+  }
   return (
     <>
       <div className="App">
         <h1>Change Person</h1>
-        <button onClick={()=>changeameHandler()}>Change</button>
-        <Person click={()=>changeameHandler()} name={persons[0].name} age={persons[0].age}></Person>
-        <Person click={()=>changeameHandler()} name={persons[1].name} age={persons[1].age}></Person>
-        <Person click={()=>changeameHandler()} name={persons[2].name} age={persons[2].age}></Person>
+        <button onClick={() => changeameHandler()}>Change</button>
+        <Person click={() => changeameHandler()} change={(event)=>switchNameHandler(event)} name={persons[0].name} age={persons[0].age}></Person>
+        <Person click={() => changeameHandler()} name={persons[1].name} age={persons[1].age}></Person>
+        <Person click={() => changeameHandler()} name={persons[2].name} age={persons[2].age}></Person>
       </div>
 
       <div className="App">
