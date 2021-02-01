@@ -40,9 +40,9 @@ function App() {
       <div className="App">
         <h1>Change Person</h1>
         <button onClick={()=>changeameHandler()}>Change</button>
-        <Person name={persons[0].name} age={persons[0].age}></Person>
-        <Person name={persons[1].name} age={persons[1].age}></Person>
-        <Person name={persons[2].name} age={persons[2].age}></Person>
+        <Person click={()=>changeameHandler()} name={persons[0].name} age={persons[0].age}></Person>
+        <Person click={()=>changeameHandler()} name={persons[1].name} age={persons[1].age}></Person>
+        <Person click={()=>changeameHandler()} name={persons[2].name} age={persons[2].age}></Person>
       </div>
 
       <div className="App">
